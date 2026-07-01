@@ -42,7 +42,7 @@ cd StereoWeaver
 Create the Conda environment using the provided environment file.
 
 ```bash
-conda env create -f environment/environment.yml
+conda env create -f environment/env.yml
 ```
 
 Activate the environment:
