@@ -23,3 +23,79 @@ The pipeline enables:
 
 * **Dr. Garima Jindal**
   Project supervision, scientific guidance, and overall research direction.
+
+## Installation
+
+### 1. Clone the repository
+
+Clone the StereoWeaver repository and navigate to the project directory.
+
+```bash
+git clone https://github.com/ccbglab/StereoWeaver.git
+cd StereoWeaver
+```
+
+---
+
+### 2. Create the Conda environment
+
+Create the Conda environment using the provided environment file.
+
+```bash
+conda env create -f environment/environment.yml
+```
+
+Activate the environment:
+
+```bash
+conda activate xtb-descriptor-env
+```
+
+---
+
+### 3. Install StereoWeaver
+
+Install StereoWeaver in editable mode.
+
+```bash
+pip install -e .
+```
+
+This registers the `axialchem` package within the active Conda environment, allowing it to be imported into any Python script.
+
+---
+
+### 4. Importing StereoWeaver
+
+After installation, the descriptor generation modules can be imported directly into any Python script.
+
+```python
+from axialchem.xtb_descriptor import *
+from axialchem.dft_descriptor import *
+```
+
+Alternatively, specific functions can be imported:
+
+```python
+from axialchem.xtb_descriptor import process_xtb
+from axialchem.dft_descriptor import process_dft
+```
+
+---
+
+### 5. Running StereoWeaver
+
+An example workflow demonstrating the complete descriptor generation pipeline is provided in:
+
+```text
+Scripts/RUN.py
+```
+
+Execute the workflow using:
+
+```bash
+python Scripts/RUN.py
+```
+
+
+
